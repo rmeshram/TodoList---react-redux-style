@@ -99,10 +99,10 @@ export default class App {
       const container = document.querySelector(".container");
       container.innerHTML = `
         <div>
-        ${Header(args)}
-        ${TodoBody(args)}
-        ${Pagination(args)}
-        ${Footer(args)}
+        ${Header(...args)}
+        ${TodoBody(...args)}
+        ${Pagination(...args)}
+        ${Footer(...args)}
         </div>
         `;
     }
