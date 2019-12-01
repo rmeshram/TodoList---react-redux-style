@@ -5,15 +5,15 @@ export default (props, context) => {
 
     const getTemplate = (id, text, completed) => {
         return `
-		<li class="todo-list" key=${id}>
-		<label for="${id}">
-          <input type="checkbox"  ${completed ? "checked" : ""} class= "completed" id="${id}"> 
-		   <span class="todo-text ${completed ? "completed" : ""}">${text} </span>
-		</label> 
-		<button id=${id} class="remove">
-			Remove
-		</button>
-		</li>`;
+			<li class="todo-list" key=${id}>
+				<label for="${id}">
+				<input type="checkbox"  ${completed ? "checked" : ""} class= "completed" id="${id}"> 
+				<span class="todo-text ${completed ? "completed" : ""}">${text} </span>
+				</label> 
+				<button id=${id} class="remove">
+					Remove
+				</button>
+			</li>`;
     };
 
     const getList = () => {

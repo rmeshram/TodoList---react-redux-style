@@ -95,14 +95,16 @@ export default class App {
         }
     }
 
-    renderApp(state, context) {
-        const container = document.querySelector(".container");
-      container.innerHTML = `<div>
-        ${Header(state, context)}${TodoBody(state, context)}${Pagination(
-            state,
-            context
-        )}${Footer(state, context)}
-        </div>`;
+    renderApp(...args) {
+      const container = document.querySelector(".container");
+      container.innerHTML = `
+        <div>
+        ${Header(args)}
+        ${TodoBody(args)}
+        ${Pagination(args)}
+        ${Footer(args)}
+        </div>
+        `;
     }
 }
 
